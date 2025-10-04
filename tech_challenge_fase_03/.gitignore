@@ -87,3 +87,6 @@ target/
 
 # Mypy cache
 .mypy_cache/
+
+# Arquivos do sistema operacional
+.DS_Store
