@@ -1,4 +1,5 @@
 import streamlit as st
+from pathlib import Path
 import pandas as pd
 from sklearn.preprocessing import StandardScaler
 from sklearn.decomposition import PCA
@@ -22,7 +23,10 @@ st.caption("💡 Dica: passe o mouse sobre os gráficos para ver valores detalha
 # ======================================================
 # 📥 LEITURA E TRATAMENTO DO DATAFRAME
 # ======================================================
-df = pd.read_csv("../data/03_model/clustering_output.csv")
+BASE_DIR = Path(__file__).resolve().parent.parent  # sobe 1 nível (do src para a raiz)
+DATA_PATH = BASE_DIR / "data" / "03_model" / "clustering_output.csv"
+
+df = pd.read_csv(DATA_PATH)
 
 # Garantindo que a coluna data esteja no formato correto
 df['data'] = pd.to_datetime(df['data'], errors='coerce')
