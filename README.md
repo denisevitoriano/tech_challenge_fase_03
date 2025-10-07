@@ -42,3 +42,6 @@
 
 * Adiciona o ipykernel
 `uv add ipykernel`
+
+* Para rodar o dashboard rode dentro da pasta `src`:
+`streamlit run app.py`
