@@ -6,7 +6,7 @@ A aplicação final foi construída em **Streamlit**, permitindo **visualizaçã
 
 Fonte dos dados: [Olist - Brazilian Ecommerce](https://www.kaggle.com/datasets/olistbr/brazilian-ecommerce)
 
-![Schema dos Dados](data/img/ollist_schema.png)
+![Schema dos Dados](data/04_img/ollist_schema.png)
 
 ---
 
