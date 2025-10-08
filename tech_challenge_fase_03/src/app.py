@@ -31,6 +31,7 @@ df = pd.read_csv(DATA_PATH)
 # Garantindo que a coluna data esteja no formato correto
 df['data'] = pd.to_datetime(df['data'], errors='coerce')
 df['data'] = df['data'].dt.date
+df['cluster_id'] = df['cluster_id'].astype(str)
 
 cluster_col = 'cluster_id'
 feature_cols = [c for c in df.columns if c.startswith('recbruta_') and c.endswith('_prop')]
@@ -45,6 +46,7 @@ cluster_colors = {
     '6': '#E377C2',
     '7': '#7F7F7F',
     '8': '#BCBD22',
+    '9': '#17BECF',
 }
 
 # ======================================================
@@ -69,7 +71,7 @@ df_filtrado[cluster_col] = df_filtrado[cluster_col].astype(str)
 # ======================================================
 # 📈 GRÁFICO 1 – Evolução de Vendedores por Categoria
 # ======================================================
-st.subheader("📆 Evolução de Vendedores por Categoria")
+st.subheader("📆 Evolução de Vendedores por Cluster")
 
 # Agrupando por data e cluster para contar quantos sellers ativos existem
 df_vendedores_cluster = (
