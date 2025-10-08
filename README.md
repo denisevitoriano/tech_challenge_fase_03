@@ -4,6 +4,10 @@ Este projeto tem como objetivo **identificar padrões de comportamento entre ven
 
 A aplicação final foi construída em **Streamlit**, permitindo **visualização interativa dos clusters**, além de gráficos de evolução temporal e análise das principais variáveis que diferenciam cada grupo.
 
+Fonte dos dados: [Olist - Brazilian Ecommerce](https://www.kaggle.com/datasets/olistbr/brazilian-ecommerce)
+
+![Schema dos Dados](data/img/ollist_schema.png)
+
 ---
 
 ## 📂 Estrutura do Projeto
